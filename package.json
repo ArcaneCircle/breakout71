@@ -1,9 +1,12 @@
 {
+  "type": "module",
   "name": "breakout.lecaro.me",
   "version": "1.0.0",
   "description": "A roguelite take on the breakout genre, optimised for short runs and replayability.",
   "scripts": {
-    "start": "bash start.sh",
+    "start": "vite --port 3000",
+    "check": "tsc && prettier --check .",
+    "build": "vite build",
     "dev:game-fe": "rm -rf .parcel-cache && parcel src/*.html --lazy --no-hmr --no-cache --dist-dir build",
     "dev:editor-be": "nodemon editserver.js  --watch editserver.js",
     "test": "jest --watch",
@@ -13,6 +16,10 @@
   "author": "Renan LE CARO",
   "license": "GNU AGPLv3",
   "devDependencies": {
+    "@webxdc/types": "latest",
+    "@webxdc/vite-plugins": "latest",
+    "@webxdc/highscores": "^5.3.0",
+    "vite": "latest",
     "@parcel/optimizer-data-url": "^2.13.3",
     "@parcel/packager-raw-url": "^2.13.3",
     "@parcel/transformer-inline-string": "^2.13.3",

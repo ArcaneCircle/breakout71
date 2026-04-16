@@ -307,7 +307,8 @@ export function isMovingWhilePassiveIncome(gameState: GameState) {
 export function getHighScore() {
   try {
     return BigInt(
-      parseFloat(localStorage.getItem("breakout-3-hs-short") || "0"),
+      //parseFloat(localStorage.getItem("breakout-3-hs-short") || "0"),
+      window.highscores.getScore(),
     );
   } catch (e) {}
   return BigInt(0);

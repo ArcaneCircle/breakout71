@@ -1,3 +1,4 @@
+import "@webxdc/highscores";
 import { allLevels, appVersion, upgrades } from "./loadGameData";
 import {
   Ball,
@@ -1004,6 +1005,7 @@ export function startComputerControlledGame(stress: boolean = false) {
   });
 }
 
+await window.highscores.init();
 tick();
 setupTooltips();
 document

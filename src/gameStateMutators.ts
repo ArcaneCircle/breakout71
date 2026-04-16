@@ -2133,6 +2133,7 @@ export function ballTick(gameState: GameState, ball: Ball, frames: number) {
       } else if (gameState.startParams.animated_perk_preview) {
         gameState.isGameOver = true;
       } else {
+        window.highscores.setScore(gameState.highScore);
         gameOver(t("gameOver.lost.title"), t("gameOver.lost.summary"));
       }
     }

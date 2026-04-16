@@ -14,3 +14,5 @@ app/release/
 .parcel-cache/
 build
 keystore.properties
+dist-xdc
+dist

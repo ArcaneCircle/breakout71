@@ -16,9 +16,10 @@
     <meta name="theme-color" content="#000000" id="themeColor" />
 
     <style>
-      @import "game.less";
+      @import "src/game.less";
     </style>
     <link rel="icon" href="data-url:./PWA/icon.svg" />
+    <script src="webxdc.js"></script>
   </head>
   <body>
     <button id="menu">☰ <span id="menuLabel">menu</span></button>
@@ -32,7 +33,7 @@
     <div id="tooltip" style="display: none"></div>
     <div id="tooltip_mobile" style="display: none"></div>
     <script type="module">
-      import "./game.ts";
+      import "./src/game.ts";
     </script>
   </body>
 </html>
