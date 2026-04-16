@@ -1005,7 +1005,10 @@ export function startComputerControlledGame(stress: boolean = false) {
   });
 }
 
-await window.highscores.init();
+await window.highscores.init({
+  compareScores: (score1, score2) => BigInt(score1) - BigInt(score2),
+});
+
 tick();
 setupTooltips();
 document
