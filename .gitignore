@@ -16,3 +16,4 @@ build
 keystore.properties
 dist-xdc
 dist
+*~
